@@ -11,7 +11,7 @@ import calculator_pb2_grpc
 def run():
     with grpc.insecure_channel('localhost:8080') as channel:
         stub = calculator_pb2_grpc.CalculatorStub(channel)
-        response = stub.Add(calculator_pb2.CalculatorRequest(var_a = 2, var_b = 3)) #the numbers to be added are 5 and 10
+        response = stub.Add(calculator_pb2.CalculatorRequest(var_a = 2, var_b = 3)) #the numbers to be added are 2 and 3
         print("Addition of " + str(response.var_a) + " and " + str(response.var_b) + " is " + str(response.result))
 
 
