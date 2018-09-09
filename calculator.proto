@@ -1,0 +1,21 @@
+syntax = "proto3";
+package helloworld;
+
+// The greeting service definition.
+service Calculator {
+  // Sends two numbers to add
+  rpc Add(CalculatorRequest) returns (CalculatorResponse) {}
+}
+
+// The request message containing the numbers to be added.
+message CalculatorRequest {
+  float var_a = 1;
+  float var_b = 2;
+}
+
+// The response message containing the result of addition
+message CalculatorResponse {
+  float result = 1;
+  float var_a = 2;
+  float var_b = 3;
+}
